@@ -1,16 +1,18 @@
 <?php
 include 'koneksi.php';
-
+  // var_dump($_POST);
     $no=$_POST['id_hasil'];
     $nama=$_POST['nama'];
-    $pendidikan_terakhir=$_POST['pendidikan_terakhir'];
-    $disiplin=$_POST['disiplin'];
-    $teamwork=$_POST['teamwork'];
-    $leadership=$_POST['leadership'];
-    $kepatuhan=$_POST['kepatuhan'];
-    $kejujuran=$_POST['kejujuran'];
-    $inisiatif=$_POST['inisiatif'];
-    $hasil_status=$_POST['hasil_status'];
+    // $pendidikan_terakhir=$_POST['pendidikan_terakhir'];
+    // $disiplin=$_POST['disiplin'];
+    // var_dump($_POST);die;
+    // $teamwork=$_POST['teamwork'];
+    // $leadership=$_POST['leadership'];
+    // $kepatuhan=$_POST['kepatuhan'];
+    // $kejujuran=$_POST['kejujuran'];
+    // $inisiatif=$_POST['inisiatif'];
+    // $hasil_status=$_POST['hasil_status'];
+    $pendidikan_terakhir =$_POST['pendidikan_terakhir'];
 
     $ratadisiplin = ($_POST['disiplin1'] + $_POST['disiplin2']+$_POST['disiplin3'])/3;
     if($ratadisiplin>=80){
@@ -242,7 +244,12 @@ $kurang =  $kurang1 * ($totalkurang/$totalData);
  //$cm = "TN";
  //}
  //INSERT
-     $query=mysqli_query($koneksi, "INSERT INTO hasil_naive VALUES ('$no','$nama','$pendidikan_terakhir','$hasildisiplin','$hasilteamwork','$hasilleadership','$hasilkepatuhan','$hasilkejujuran','$hasilinisiatif','$baik','$normal','$kurang')") or die(mysqli_error($koneksi));
+ $najib = "INSERT INTO hasil_naive (
+  id_hasil,nama,pendidikan_terakhir,disiplin,teamwork,leadership,
+  kepatuhan,kejujuran,inisiatif,hasil_baik,hasil_normal,hasil_kurang
+ ) VALUES (0,'$nama','$pendidikan_terakhir','$hasildisiplin','$hasilteamwork','$hasilleadership','$hasilkepatuhan','$hasilkejujuran','$hasilinisiatif','$baik','$normal','$kurang')";
+//  var_dump($najib);die;
+     $query=mysqli_query($koneksi, $najib) or die(mysqli_error($koneksi));
       if($query):
          echo "<script language='javascript'>swal('Selamat...', 'Data Berhasil di input!', 'success');</script>" ;
          echo '<meta http-equiv="Refresh" content="0; URL=datatesting.php">';

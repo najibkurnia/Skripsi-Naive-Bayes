@@ -382,6 +382,7 @@
                             <option value="S1">Strata 1</option>
                           </select>
                         </div>
+                        <input type="hidden" name="id_hasil" value="<?= date('dmY') ?>">
                         <div class="form-group">
                           <label for="disiplin">Disiplin</label>
                               <br><input type="number" name="disiplin1" />

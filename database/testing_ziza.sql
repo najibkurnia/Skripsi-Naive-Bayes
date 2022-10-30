@@ -70,26 +70,27 @@ CREATE TABLE `data_testing` (
   `CM` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE `data_train` (
-  `no_train` int(11) NOT NULL,
-  `umur` varchar(20) NOT NULL,
-  `jk` varchar(20) NOT NULL,
-  `tipe_nyeri` varchar(20) NOT NULL,
-  `tekanan_darah` varchar(20) NOT NULL,
-  `kolesterol` varchar(20) NOT NULL,
-  `gula_darah` varchar(20) NOT NULL,
-  `elektro` varchar(20) NOT NULL,
-  `detak_jantung` varchar(20) NOT NULL,
-  `angina` varchar(20) NOT NULL,
-  `oldpeak` varchar(20) NOT NULL,
-  `segmen` varchar(20) NOT NULL,
-  `pembulu_darah` varchar(20) NOT NULL,
-  `thalassemia` varchar(20) NOT NULL,
-  `ket` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-- CREATE TABLE `data_train` (
+--   `no_train` int(11) NOT NULL,
+--   `umur` varchar(20) NOT NULL,
+--   `jk` varchar(20) NOT NULL,
+--   `tipe_nyeri` varchar(20) NOT NULL,
+--   `tekanan_darah` varchar(20) NOT NULL,
+--   `kolesterol` varchar(20) NOT NULL,
+--   `gula_darah` varchar(20) NOT NULL,
+--   `elektro` varchar(20) NOT NULL,
+--   `detak_jantung` varchar(20) NOT NULL,
+--   `angina` varchar(20) NOT NULL,
+--   `oldpeak` varchar(20) NOT NULL,
+--   `segmen` varchar(20) NOT NULL,
+--   `pembulu_darah` varchar(20) NOT NULL,
+--   `thalassemia` varchar(20) NOT NULL,
+--   `ket` varchar(20) NOT NULL
+-- ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `data_train` (
   `id_train` int(11) NOT NULL,
+  `no_train` int(11) NOT NULL,
   `nama` varchar(20) NOT NULL,
   `pendidikan_terakhir` varchar(20) NOT NULL,
   `disiplin` varchar(20) NOT NULL,
@@ -129,7 +130,7 @@ ALTER TABLE `data_testing`
   ADD PRIMARY KEY (`no_testing`);
 
 ALTER TABLE `data_train`
-  ADD PRIMARY KEY (`no_train`);
+  ADD PRIMARY KEY (`id_train`);
 
 ALTER TABLE `hasil_naive`
   ADD PRIMARY KEY (`id_hasil`);

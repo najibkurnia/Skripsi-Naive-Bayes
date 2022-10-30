@@ -30,7 +30,6 @@
 </head>
 
 <body id="page-top">
-
   <!-- Page Wrapper -->
   <div id="wrapper">
 
@@ -44,8 +43,7 @@
         </div>
         <div class="sidebar-brand-text mx-3">Dashboard</div>
       </a>
-
-
+      
       <!-- Divider -->
       <hr class="sidebar-divider">
 
@@ -58,6 +56,7 @@
       <li class="nav-item active">
         <a class="nav-link" href="admin.php">
           <i class="fas fa-fw fa-table"></i>
+          <i class="fas fa-fw fa-laugh"></i>
           <span>Admin</span></a>
       </li>
       <li class="nav-item active">
@@ -108,12 +107,8 @@
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-          
-
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
-
-            
 
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
